@@ -6,6 +6,10 @@ local plugins = {
       'nvim-lua/plenary.nvim',
     },
   },
+  {
+    'echasnovski/mini.pairs',
+    version = '*',
+  },
 }
 
 return plugins
