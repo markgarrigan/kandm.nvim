@@ -28,10 +28,31 @@ local plugins = {
     version = '*',
     event = 'VeryLazy',
     config = function()
-      require("nvim-surround").setup({})
+      require('nvim-surround').setup({})
     end
   },
   { 'mg979/vim-visual-multi' },
+  {
+    'neovim/nvim-lspconfig',
+    config = function()
+      require 'plugins.configs.lspconfig'
+      require 'custom.configs.lspconfig'
+    end,
+  },
+  {
+    'williamboman/mason.nvim',
+    opts = {
+      ensure_installed = {
+        'lua-language-server',
+        'html-lsp',
+        'htmx-lsp',
+        'stylua',
+        'tailwindcss-language-server',
+        'typescript-language-server',
+        'css-lsp',
+      },
+    },
+  },
 }
 
 return plugins

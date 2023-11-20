@@ -1,3 +1,11 @@
+local opt = vim.opt -- for conciseness
+
+-- line numbers
+opt.relativenumber = true -- show relative line numbers
+
+-- line wrapping
+opt.wrap = false -- disable line wrapping
+
 ---@type ChadrcConfig
 local M = {}
 
@@ -9,6 +17,7 @@ M.ui = {
   statusline = {
     theme = 'vscode_colored'
   },
+  telescope = { style = 'bordered' }, -- borderless / bordered
 }
 
 return M
