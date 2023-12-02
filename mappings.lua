@@ -16,6 +16,10 @@ M.abc = {
     ['<leader>sr'] = {'<cmd>Telescope oldfiles<CR>', '[S]earch [R]ecent files.'},
     ['<leader>sk'] = {'<cmd>Telescope keymaps<CR>', '[S]earch [K]eymaps.'},
     ['<leader>sc'] = {'<cmd>Telescope grep_string<CR>', '[S]earch string under [C]ursor.'},
+    ['<leader>D']  = {'<cmd>Telescope diagnostics bufnr=0<CR>', 'Show [D]iagnostics for the file.'},
+    ['<leader>d']  = {'<cmd>lua vim.diagnostic.open_float()<CR>', 'Show [D]iagnostics for the line.'},
+    ['[d']         = {'<cmd>lua vim.diagnostic.goto_prev()<CR>', 'Jump to previous diagnostic in file.'},
+    [']d']         = {'<cmd>lua vim.diagnostic.goto_next()<CR>', 'Jump to next diagnostic in file.'},
   },
 
   i = {
