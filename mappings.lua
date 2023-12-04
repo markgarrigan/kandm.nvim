@@ -20,6 +20,10 @@ M.abc = {
     ['<leader>d']  = {'<cmd>lua vim.diagnostic.open_float()<CR>', 'Show [D]iagnostics for the line.'},
     ['[d']         = {'<cmd>lua vim.diagnostic.goto_prev()<CR>', 'Jump to previous diagnostic in file.'},
     [']d']         = {'<cmd>lua vim.diagnostic.goto_next()<CR>', 'Jump to next diagnostic in file.'},
+    ['<leader>rs+'] = {'<cmd>horizontal resize +2<CR>', '[R]e[S]ize horizontal larger.'},
+    ['<leader>rs_'] = {'<cmd>horizontal resize -2<CR>', '[R]e[S]ize horizontal smaller.'},
+    ['<leader>rs='] = {'<cmd>vertical resize +5<CR>', '[R]e[S]ize vertical larger.'},
+    ['<leader>rs-'] = {'<cmd>vertical resize -5<CR>', '[R]e[S]ize vertical smaller.'},
   },
 
   i = {
