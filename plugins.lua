@@ -11,6 +11,12 @@ local plugins = {
     version = '*',
   },
   {
+    'nvim-treesitter/nvim-treesitter',
+    opts = {
+      ensure_installed = {'html', 'lua', 'javascript', 'typescript', 'css', 'scss', 'bash', 'json'}
+    },
+  },
+  {
     'nvim-telescope/telescope.nvim',
     opts = function()
       local conf = require 'plugins.configs.telescope'
@@ -50,8 +56,33 @@ local plugins = {
         'tailwindcss-language-server',
         'typescript-language-server',
         'css-lsp',
+        'js-debug-adapter',
       },
     },
+  },
+  {
+    'mfussenegger/nvim-dap',
+    config = function()
+      require "custom.configs.nvim-dap"
+    end,
+  },
+  {
+    'jay-babu/mason-nvim-dap.nvim',
+    lazy = false,
+    dependencies = 'mason.nvim',
+    cmd = { 'DapInstall', 'DapUninstall' },
+    opts = {
+      automatic_installation = true,
+      ensure_installed = {
+        'js'
+      }
+    },
+  },
+  {
+    'rcarriga/nvim-dap-ui',
+    config = function()
+      require "custom.configs.nvim-dap-ui"
+    end,
   },
 }
 
