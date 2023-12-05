@@ -42,12 +42,6 @@ M.kandm = {
       end,
       '[D]ebug [B]reakpoint Condition'
     },
-    ['<leader>dB'] = {
-      function()
-        require('dap').set_breakpoint(vim.fn.input('Breakpoint condition: '))
-      end,
-      '[D]ebug [B]reakpoint Condition.'
-    },
     ['<leader>db'] = {
       function()
         require('dap').toggle_breakpoint()
@@ -59,12 +53,6 @@ M.kandm = {
         require('dap').continue()
       end,
       '[D]ebug [C]ontinue.'
-    },
-    ['<leader>da'] = {
-      function()
-        require('dap').continue({ before = get_args })
-      end,
-      '[D]ebug Run with [A]rgs.'
     },
     ['<leader>dC'] = {
       function()
